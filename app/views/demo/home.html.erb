@@ -1,0 +1,17 @@
+<h1>HELLO</h1>
+
+<% var = "Learning and Making Apps"%>
+
+<%= "Look at this:- " "#{var}"%>
+
+<h1>Printing Value of array which is present at home </h1>
+
+<% @home.each do |n| %>
+<%= n %> <br/>	
+<% end %>
+
+<%= link_to 'Go Back', {:action => 'index'} %>
+<%= link_to"See All Admin Pannel", {controller: "subjects", action: "index"} %> 
+
+
+

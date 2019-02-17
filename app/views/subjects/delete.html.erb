@@ -1,0 +1,20 @@
+<% if !flash[:notice].blank?%>
+<div class = "notice">
+	<%= flash[:notice]%>
+</div>
+<%end%>
+
+<%= link_to("Back TO LIST",subjects_path,:class => 'back-link')%>
+<div class = "subjects delete">
+	<h1>Delete Subject</h1>
+	<%= form_for(@subject,:url => subject_path(@subject),:method => 'delete') do |f| %>
+	<p>Are you sure you want to delete</p>
+
+	<p class = "reference-name"><%=@subject.name%></p>
+
+	<div class = "form-button">
+		<%= f.submit("Delete Subject")%>
+	</div>
+	<%end%>
+</div>
+
